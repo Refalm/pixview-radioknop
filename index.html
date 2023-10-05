@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Pixview en RADIOKNOP</title>
+</head>
+<body>
+<label for="select-array"><b>Genre</b></label><br>
+<select id="select-array" onchange="loadNames()">
+	<option value="">Selecteer een genre</option>
+</select>
+
+<br><br>
+
+<label for="select-name"><b>Radiozender</b></label><br>
+<select id="select-name">
+	<option value="">Selecteer een radiozender</option>
+</select>
+
+<br><br>
+
+<audio id="audio-player" controls autoplay></audio>
+
+<script type="text/javascript">
+fetch('https://www.radioknop.nl/api.php')
+.then(response => response.json())
+.then(data => {
+	var selectArray = document.getElementById("select-array");
+	var selectName = document.getElementById("select-name");
+	var audioPlayer = document.getElementById("audio-player");
+
+	selectArray.innerHTML = "<option value=''>Selecteer een genre</option>";
+
+	for (var key in data) {
+		var option = document.createElement("option");
+		option.text = key;
+		option.value = key;
+		selectArray.add(option);
+	}
+
+	function loadNames() {
+		selectName.innerHTML = "<option value=''>Selecteer een radiozender</option>";
+
+		if (selectArray.value !== "") {
+		var array = data[selectArray.value];
+
+			for (var i = 0; i < array.length; i++) {
+				var option = document.createElement("option");
+				option.text = array[i].name;
+				option.value = array[i].url;
+				selectName.add(option);
+			}
+		}
+	}
+
+	function showUrl() {
+		audioPlayer.src = selectName.value;
+	}
+
+	selectArray.addEventListener("change", loadNames);
+
+	selectName.addEventListener("change", showUrl);
+});
+</script>
+</body>
+</html>

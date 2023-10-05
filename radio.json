@@ -1,0 +1,42 @@
+{
+    "ambient": [
+      {
+        "name": "Ambient Sleeping Pill",
+        "description": "Helpt best goed bij het slapen eigenlijk.",
+        "url": "https://radio.stereoscenic.com/asp-s",
+        "website": "https://ambientsleepingpill.com/"
+      },
+      {
+        "name": "Brazilian Birds",
+        "description": "Net alsof je in de natuur bent.",
+        "url": "https://strm112.1.fm/brazilianbirds_mobile_mp3",
+        "website": "https://www.1.fm/"
+      },
+      {
+        "name": "SomaFM Vaporwaves",
+        "description": "ＷＩＮＫＥＬＣＥＮＴＲＵＭ ＳＡＮ ＦＲＡＮＣＩＳＣＯ．",
+        "url": "https://ice1.somafm.com/vaporwaves-128-mp3",
+        "website": "https://somafm.com/"
+      }
+    ],
+    "americana": [
+      {
+        "name": "Absolute Country Hits",
+        "description": "De country van nu.",
+        "url": "https://strmreg.1.fm/acountry_mobile_mp3",
+        "website": "https://www.1.fm/"
+      },
+      {
+        "name": "Arrow Blues Box",
+        "description": "De fijnste bluesrock.",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/ARROWBLUESBOX.mp3",
+        "website": "https://arrowbluesrock.nl/"
+      },
+      {
+        "name": "WFMU Rock 'n' Soul Radio",
+        "description": "Blues, soul, rock-'n-roll, maar dan niet misschien de meest bekende.",
+        "url": "https://stream0.wfmu.org/rocknsoul",
+        "website": "https://wfmu.org/"
+      }
+    ]
+  }
